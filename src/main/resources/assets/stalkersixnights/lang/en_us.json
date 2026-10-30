@@ -1,0 +1,14 @@
+{
+  "entity.stalkersixnights.stalker": "The Stalker (Legacy)",
+  "entity.stalkersixnights.watcher": "The Watcher",
+  "entity.stalkersixnights.runner": "The Runner",
+  "entity.stalkersixnights.mimic": "The Mimic",
+  "entity.stalkersixnights.face": "The Face",
+  "entity.stalkersixnights.stalker_child": "Stalker Child",
+  "item.stalkersixnights.stalker_spawn_egg": "Legacy Stalker Spawn Egg",
+  "item.stalkersixnights.watcher_spawn_egg": "Watcher Spawn Egg",
+  "item.stalkersixnights.runner_spawn_egg": "Runner Spawn Egg",
+  "item.stalkersixnights.mimic_spawn_egg": "Mimic Spawn Egg",
+  "item.stalkersixnights.face_spawn_egg": "Face Spawn Egg",
+  "item.stalkersixnights.stalker_child_spawn_egg": "Stalker Child Spawn Egg"
+}

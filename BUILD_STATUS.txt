@@ -1,0 +1,13 @@
+The Stalker: Six Nights 0.4.0 - preparation notes
+
+This is an updated Forge 1.20.1 source project based on the supplied 0.3.0 source.
+Included:
+- Separate registered entity IDs and spawn eggs: Watcher, Runner, Mimic, Face, Stalker Child, plus legacy Stalker.
+- Stalker Children render as camera-facing transparent PNG sprites from the supplied project images; they are world entities, not GUI jumpscare overlays.
+- Face uses a world-space image renderer; it is not the child PNG/jumpscare overlay system.
+- Black fog color and shortened fog distance are only applied while an entity's synchronized chase state is active.
+- The three supplied OGG voice clips are included and registered.
+- Original generated OGG chase music and sound effects are included and registered.
+
+IMPORTANT TEST STATUS:
+This environment did not have Gradle installed and could not download Gradle, so a Forge compile or live Minecraft test was NOT performed here. Run the included GitHub Actions workflow. If compilation fails, send the complete first compiler error and I will correct it. Do not treat this archive as a verified working JAR yet.

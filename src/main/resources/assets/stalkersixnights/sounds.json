@@ -1,0 +1,60 @@
+{
+  "chase_music": {
+    "sounds": [
+      {
+        "name": "stalkersixnights:chase_music",
+        "stream": true
+      }
+    ]
+  },
+  "heartbeat": {
+    "sounds": [
+      "stalkersixnights:heartbeat"
+    ]
+  },
+  "footsteps": {
+    "sounds": [
+      "stalkersixnights:footsteps"
+    ]
+  },
+  "door_knock": {
+    "sounds": [
+      "stalkersixnights:door_knock"
+    ]
+  },
+  "window_scratch": {
+    "sounds": [
+      "stalkersixnights:window_scratch"
+    ]
+  },
+  "breathing": {
+    "sounds": [
+      "stalkersixnights:breathing"
+    ]
+  },
+  "teleport": {
+    "sounds": [
+      "stalkersixnights:teleport"
+    ]
+  },
+  "impact": {
+    "sounds": [
+      "stalkersixnights:impact"
+    ]
+  },
+  "voice_watcher_1": {
+    "sounds": [
+      "stalkersixnights:voice_watcher_1"
+    ]
+  },
+  "voice_watcher_2": {
+    "sounds": [
+      "stalkersixnights:voice_watcher_2"
+    ]
+  },
+  "voice_mimic_1": {
+    "sounds": [
+      "stalkersixnights:voice_mimic_1"
+    ]
+  }
+}

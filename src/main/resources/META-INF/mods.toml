@@ -1,0 +1,21 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+[[mods]]
+modId="stalkersixnights"
+version="0.3.0"
+displayName="The Stalker: Six Nights"
+authors="Stalker Six Nights"
+description='''An escalating six-night Minecraft horror experience with lingering watchers, smaller stalkers, black fog, rare PNG scares, survival encounters, and a final letter on night six.'''
+[[dependencies.stalkersixnights]]
+modId="forge"
+mandatory=true
+versionRange="[47,48)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.stalkersixnights]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20.1,1.20.2)"
+ordering="NONE"
+side="BOTH"
