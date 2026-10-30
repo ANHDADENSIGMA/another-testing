@@ -1,0 +1,79 @@
+name: Build The Stalker Six Nights
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build Forge 1.20.1 Mod
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Tải mã nguồn từ repository
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      # 2. Cài Java 17
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      # 3. Cài Gradle 8.8
+      - name: Set up Gradle 8.8
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
+
+      # 4. Kiểm tra cấu trúc project
+      - name: Check project files
+        shell: bash
+        run: |
+          echo "=== Repository root ==="
+          pwd
+          ls -la
+
+          echo "=== Gradle files ==="
+          find . -maxdepth 4 \( \
+            -name gradlew -o \
+            -name build.gradle -o \
+            -name build.gradle.kts -o \
+            -name settings.gradle -o \
+            -name settings.gradle.kts \
+          \) -print
+
+      # 5. Build mod
+      - name: Build mod
+        shell: bash
+        run: |
+          set -e
+
+          if [ -f gradlew ]; then
+            chmod +x gradlew
+            ./gradlew --version
+            ./gradlew build --no-daemon
+          elif [ -f build.gradle ] || [ -f build.gradle.kts ]; then
+            gradle --version
+            gradle build --no-daemon
+          else
+            echo "::error::Không tìm thấy Gradle project ở thư mục gốc."
+            echo "Kiểm tra bước Check project files."
+            exit 1
+          fi
+
+      # 6. Upload file JAR
+      - name: Upload mod JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: The-Stalker-Six-Nights-Forge-1.20.1
+          path: '**/build/libs/*.jar'
+          if-no-files-found: error
+          retention-days: 14
